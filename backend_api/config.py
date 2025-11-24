@@ -3,7 +3,7 @@ import mysql.connector
 DB_CONFIG = {
     "host": "localhost",
     "user": "root",
-    "password": "continental",
+    "password": "",
     "database": "sistema_matricula",
     "port": 3306
 }
