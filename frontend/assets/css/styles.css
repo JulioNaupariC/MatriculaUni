@@ -1,0 +1,113 @@
+/* --------------------------------------------------
+  TIPOGRAFÍA Y RESETEOS
+-------------------------------------------------- */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f5f7fb !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------------------------------
+  NAVBAR
+-------------------------------------------------- */
+.navbar-brand {
+  letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------
+  TABLAS Y ELEMENTOS
+-------------------------------------------------- */
+table tbody tr:hover {
+  background-color: #f1f5ff;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+.modal-content {
+  border-radius: 1rem !important;
+}
+
+/* --------------------------------------------------
+  BOTONES
+-------------------------------------------------- */
+.btn-primary {
+  border-radius: 30px;
+  padding: 8px 25px;
+  background: #006aff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #004fcb;
+}
+
+.btn-outline-primary {
+  border-radius: 30px;
+}
+
+/* --------------------------------------------------
+  TARJETAS DEL DASHBOARD (PANEL PRINCIPAL)
+-------------------------------------------------- */
+.dashboard-card {
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease-in-out;
+  min-height: 300px;                  /* MISMA ALTURA */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;     /* Texto arriba, botón abajo */
+  padding: 25px;
+  text-align: center;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.15);
+}
+
+.dashboard-card h4 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.dashboard-card p {
+  font-size: 14px;
+  padding: 0 10px;
+  color: #6c757d;
+}
+
+/* --------------------------------------------------
+  ICONOS CIRCULARES ELEGANTES
+-------------------------------------------------- */
+.icon-container {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 12px auto;
+  border-radius: 50%;
+  background: #e9f1ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Iconos SVG */
+.icon-container img {
+  width: 48px;
+  height: 48px;
+}
+
+/* --------------------------------------------------
+  CARDS PEQUEÑAS GENÉRICAS DEL SISTEMA
+-------------------------------------------------- */
+.hover-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
