@@ -3,9 +3,8 @@
 
 Sistema web completo de gestión académica desarrollado con **Arquitectura Orientada a Servicios (SOA)**. Implementa gestión de alumnos, cursos, matrículas, evaluaciones y reportería académica mediante servicios REST.
 
----
 
-## 📋 Tabla de Contenidos
+##  Tabla de Contenidos
 
 - [Características](#características)
 - [Arquitectura](#arquitectura)
@@ -18,35 +17,34 @@ Sistema web completo de gestión académica desarrollado con **Arquitectura Orie
 - [Servicios REST Disponibles](#servicios-rest-disponibles)
 - [Tecnologías](#tecnologías)
 
----
 
-## ✨ Características
+## Características
 
 ### Funcionalidades Principales
 
-- ✅ **Gestión de Alumnos**: CRUD completo con validaciones
-- ✅ **Gestión de Cursos**: Administración de cursos por ciclo académico
-- ✅ **Sistema de Matrícula**: Matrícula flexible hasta 6 cursos por ciclo
-- ✅ **Evaluación de Cursos**: Registro de notas con cálculo automático de aprobación
-- ✅ **Reportería Académica**: 3 interfaces de reportes
+-  **Gestión de Alumnos**: CRUD completo con validaciones
+-  **Gestión de Cursos**: Administración de cursos por ciclo académico
+-  **Sistema de Matrícula**: Matrícula flexible hasta 6 cursos por ciclo
+-  **Evaluación de Cursos**: Registro de notas con cálculo automático de aprobación
+-  **Reportería Académica**: 3 interfaces de reportes
   - Notas de los 3 últimos ciclos
   - Notas del último ciclo
   - Reporte general por ciclo
 
+
 ### Características Técnicas
 
-- 🏗️ **Arquitectura SOA**: Servicios independientes que se comunican por HTTP
-- 📊 **26 Servicios REST**: APIs completas para todos los módulos
-- 📝 **Logging Profesional**: Registro con Transaction ID, timestamps ISO 8601, métricas de rendimiento
-- 🔒 **Validaciones Exhaustivas**: Validación de datos en frontend y backend
-- 🌐 **Interfaz Moderna**: Bootstrap 5 con diseño responsivo
-- 🔄 **Sistema de Arrastre**: Cursos desaprobados se llevan al siguiente ciclo
+-  **Arquitectura SOA**: Servicios independientes que se comunican por HTTP
+-  **26 Servicios REST**: APIs completas para todos los módulos
+-  **Logging Profesional**: Registro con Transaction ID, timestamps ISO 8601, métricas de rendimiento
+-  **Validaciones Exhaustivas**: Validación de datos en frontend y backend
+-  **Interfaz Moderna**: Bootstrap 5 con diseño responsivo
+-  **Sistema de Arrastre**: Cursos desaprobados se llevan al siguiente ciclo
 
----
 
-## 🏛️ Arquitectura
+##  Arquitectura
 
-```
+
 ┌─────────────────────────────────────────────────────┐
 │                  FRONTEND WEB                       │
 │              (Apache HTTP / Python)                 │
@@ -94,11 +92,9 @@ Sistema web completo de gestión académica desarrollado con **Arquitectura Orie
 │  │evaluación│                                      │
 │  └──────────┘                                      │
 └─────────────────────────────────────────────────────┘
-```
 
----
 
-## 🔧 Requisitos Previos
+##  Requisitos Previos
 
 ### Software Necesario
 
@@ -109,16 +105,16 @@ Sistema web completo de gestión académica desarrollado con **Arquitectura Orie
 
 ### Librerías Python
 
-```
+
 Flask==2.3.0
 flask-cors==4.0.0
 mysql-connector-python==8.0.33
 requests==2.31.0
-```
 
----
 
-## 📥 Instalación
+
+
+##  Instalación
 
 ### 1. Clonar o Descargar el Proyecto
 
@@ -164,7 +160,7 @@ pip install Flask flask-cors mysql-connector-python requests
 
 ---
 
-## 🗄️ Configuración de Base de Datos
+##  Configuración de Base de Datos
 
 ### Opción 1: SQLite (Más Simple - Recomendado para Pruebas)
 
@@ -181,11 +177,10 @@ Esto creará automáticamente:
 - Datos de prueba: 11 alumnos, 60 cursos
 
 **Ventajas de SQLite:**
-- ✅ No requiere instalación de MySQL
-- ✅ Portátil (un solo archivo)
-- ✅ Ideal para demostraciones
+-  No requiere instalación de MySQL
+-  Portátil (un solo archivo)
+-  Ideal para demostraciones
 
----
 
 ### Opción 2: MySQL (Producción)
 
@@ -233,9 +228,9 @@ DATABASE_CONFIG = {
 # DATABASE_CONFIG = {'database': 'sistema_matricula.db'}
 ```
 
----
 
-## 🚀 Ejecución del Sistema
+
+##  Ejecución del Sistema
 
 ### Paso 1: Iniciar Backend (API REST)
 
@@ -253,9 +248,9 @@ python app.py
 Press CTRL+C to quit
 ```
 
-✅ **Backend corriendo en:** `http://127.0.0.1:5000`
+ **Backend corriendo en:** `http://127.0.0.1:5000`
 
----
+
 
 ### Paso 2: Iniciar Frontend (Interfaz Web)
 
@@ -273,9 +268,9 @@ python -m http.server 8080
 Serving HTTP on :: port 8080 (http://[::]:8080/) ...
 ```
 
-✅ **Frontend disponible en:** `http://localhost:8080`
+ **Frontend disponible en:** `http://localhost:8080`
 
----
+
 
 #### Opción B: Apache HTTP Server
 
@@ -284,31 +279,31 @@ Serving HTTP on :: port 8080 (http://[::]:8080/) ...
 3. **Iniciar Apache** desde XAMPP Control Panel
 4. **Abrir navegador:** `http://localhost/sistema_matricula/index.html`
 
----
+
 
 ### Paso 3: Acceder al Sistema
 
 Abrir navegador en: **`http://localhost:8080/index.html`**
 
 Deberías ver el dashboard principal con 5 módulos:
-- 👨‍🎓 Alumnos
-- 📚 Cursos
-- 📝 Matrículas
-- 📊 Evaluaciones
-- 📈 Reportes
+-  Alumnos
+-  Cursos
+-  Matrículas
+-  Evaluaciones
+-  Reportes
 
----
 
-## 📖 Uso del Sistema
+
+##  Uso del Sistema
 
 ### 1. Gestión de Alumnos
 
 **URL:** `http://localhost:8080/alumnos.html`
 
 **Operaciones:**
-- ✅ **Crear alumno**: Click "Nuevo Alumno" → Llenar formulario
-- ✅ **Editar alumno**: Click botón amarillo (lápiz)
-- ✅ **Eliminar alumno**: Click botón rojo (X)
+-  **Crear alumno**: Click "Nuevo Alumno" → Llenar formulario
+-  **Editar alumno**: Click botón amarillo (lápiz)
+-  **Eliminar alumno**: Click botón rojo (X)
 
 **Validaciones:**
 - DNI: 8 dígitos numéricos
@@ -316,17 +311,16 @@ Deberías ver el dashboard principal con 5 módulos:
 - Teléfono: 9 dígitos, inicia con 9
 - Nombre/Apellido: Solo letras
 
----
 
 ### 2. Gestión de Cursos
 
 **URL:** `http://localhost:8080/cursos.html`
 
 **Operaciones:**
-- ✅ Listar cursos por ciclo
-- ✅ Crear nuevo curso
-- ✅ Editar curso existente
-- ✅ Eliminar curso
+-  Listar cursos por ciclo
+-  Crear nuevo curso
+-  Editar curso existente
+-  Eliminar curso
 
 **Datos requeridos:**
 - Código: Ej. "MAT101"
@@ -334,7 +328,7 @@ Deberías ver el dashboard principal con 5 módulos:
 - Créditos: 1-5
 - Ciclo: 1-10
 
----
+
 
 ### 3. Matrícula de Cursos
 
@@ -347,9 +341,9 @@ Deberías ver el dashboard principal con 5 módulos:
 4. Confirmar matrícula
 
 **Reglas de negocio:**
-- ⚠️ Máximo 6 cursos por ciclo
-- ⚠️ Cursos desaprobados son obligatorios
-- ⚠️ No se puede matricular 2 veces el mismo curso en el mismo ciclo
+-  Máximo 6 cursos por ciclo
+-  Cursos desaprobados son obligatorios
+-  No se puede matricular 2 veces el mismo curso en el mismo ciclo
 
 ---
 
@@ -365,7 +359,6 @@ Deberías ver el dashboard principal con 5 módulos:
    - Aprobado: nota ≥ 10.5
    - Desaprobado: nota < 10.5
 
----
 
 ### 5. Reportes Académicos
 
@@ -388,11 +381,11 @@ Deberías ver el dashboard principal con 5 módulos:
 - Estadísticas globales
 - Historial académico completo
 
----
 
-## 📁 Estructura del Proyecto
 
-```
+##  Estructura del Proyecto
+
+
 Sistema_Matricula_FINAL/
 │
 ├── backend_api/                    # Backend Flask
@@ -444,11 +437,10 @@ Sistema_Matricula_FINAL/
 │       └── icons/                  # Iconos SVG
 │
 └── README.md                       # Este archivo
-```
 
----
 
-## 🌐 Servicios REST Disponibles
+
+##  Servicios REST Disponibles
 
 ### Módulo Alumnos
 
@@ -505,9 +497,8 @@ Sistema_Matricula_FINAL/
 
 **Total:** 26 servicios REST implementados
 
----
 
-## 🛠️ Tecnologías
+##  Tecnologías
 
 ### Backend
 - **Python 3.8+**: Lenguaje principal
@@ -529,9 +520,9 @@ Sistema_Matricula_FINAL/
 - **MVC**: Patrón Modelo-Vista-Controlador
 - **Blueprints**: Modularización de Flask
 
----
 
-## 📊 Pruebas y Validación
+
+##  Pruebas y Validación
 
 ### Probar Backend con CURL
 
@@ -556,7 +547,7 @@ curl http://127.0.0.1:5000/api/alumnos/1
 
 ---
 
-## 🐛 Solución de Problemas
+##  Solución de Problemas
 
 ### Error: "No module named 'flask'"
 ```bash
@@ -577,9 +568,9 @@ pip install Flask
 - Verificar errores de CORS
 - Confirmar que backend responde en puerto 5000
 
----
 
-## 📝 Logging
+
+##  Logging
 
 El sistema genera logs profesionales en `backend_api/logs/`
 
@@ -589,40 +580,38 @@ El sistema genera logs profesionales en `backend_api/logs/`
 ```
 
 **Metadatos incluidos:**
-- ✅ Timestamp ISO 8601 UTC
-- ✅ Nivel (INFO, WARN, ERROR)
-- ✅ Transaction ID único
-- ✅ Módulo/Servicio
-- ✅ Archivo y línea de código
-- ✅ Función ejecutada
-- ✅ PID y Thread ID
-- ✅ IP del cliente
-- ✅ Método HTTP y URI
-- ✅ Tiempo de procesamiento
+-  Timestamp ISO 8601 UTC
+-  Nivel (INFO, WARN, ERROR)
+-  Transaction ID único
+-  Módulo/Servicio
+-  Archivo y línea de código
+-  Función ejecutada
+-  PID y Thread ID
+-  IP del cliente
+-  Método HTTP y URI
+-  Tiempo de procesamiento
 
----
 
-## 👥 Autor
+##  Autor
 
 **Curso:** Arquitectura Orientada a Servicios  
 **Proyecto:** Sistema de Matrícula Universitaria  
 **Año:** 2024
 
----
 
-## 📄 Licencia
+##  Licencia
 
 Este proyecto es desarrollado con fines académicos para el curso de Arquitectura Orientada a Servicios.
 
----
 
-## 🆘 Soporte
+
+##  Soporte
 
 Para preguntas o problemas:
 1. Revisar la sección de [Solución de Problemas](#solución-de-problemas)
 2. Verificar los logs en `backend_api/logs/sistema_completo.log`
 3. Consultar con el instructor del curso
 
----
+
 
 **¡Sistema listo para demostración y evaluación! 🎉**
